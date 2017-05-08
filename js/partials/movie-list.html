@@ -1,0 +1,14 @@
+<div class="container">
+  <ul>
+    <li ng-repeat="movie in movies | orderBy: 'year' " }>
+      <figure>
+        <a href="#/{{ movie.title | encodeURI }}">
+          <img class="list-imgs" ng-src="{{movie.poster}}">
+        </a>
+        <figcaption>
+          <h5>{{movie.title}}</h5>
+        </figcaption>
+      </figure>
+    </li>
+  </ul>
+</div>
